@@ -1,1 +1,2 @@
 # gnzsmarketing
+тест
