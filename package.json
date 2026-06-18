@@ -1,0 +1,27 @@
+{
+  "name": "gnzsmarketing",
+  "version": "1.0.0",
+  "description": "Работа в отделе маркетинга компании Генезис",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node SEO/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nastassiaklimenka/gnzsmarketing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/nastassiaklimenka/gnzsmarketing/issues"
+  },
+  "homepage": "https://github.com/nastassiaklimenka/gnzsmarketing#readme",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "playwright": "^1.61.0",
+    "xlsx": "^0.18.5"
+  }
+}
