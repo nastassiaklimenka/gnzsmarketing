@@ -15,7 +15,7 @@
     [string[]]$Regions = @("213"),
 
     [string]$RawOut = ".\\wordstat_raw.csv",
-    [string]$CleanOut = ".\\wordstat_clean_clusters.csv",
+    [string]$CleanOut = ".\\wordstat_clean_clusters.md",
     [string]$RawPhrasesOut = ".\\wordstat_raw_phrases.txt",
     [string]$CleanPhrasesOut = ".\\wordstat_clean_top_phrases.txt",
 
@@ -67,6 +67,55 @@ function Is-CleanPhrase {
     }
     if ($Phrase.Length -lt 3) { return $false }
     return $true
+}
+
+function Escape-MarkdownCell {
+    param([object]$Value)
+
+    if ($null -eq $Value) { return "" }
+    return ($Value.ToString() -replace '\|', '\|' -replace "`r?`n", " ").Trim()
+}
+
+function Write-ClustersMarkdown {
+    param(
+        [object[]]$Rows,
+        [string]$Path,
+        [string]$Title
+    )
+
+    $lines = New-Object System.Collections.Generic.List[string]
+    $lines.Add("# $Title")
+    $lines.Add("")
+    $lines.Add("Сформировано: $(Get-Date -Format 'yyyy-MM-dd HH:mm')")
+    $lines.Add("")
+
+    if (-not $Rows -or $Rows.Count -eq 0) {
+        $lines.Add("_Нет очищенных запросов для вывода._")
+        $lines | Out-File -FilePath $Path -Encoding utf8
+        return
+    }
+
+    $clusterNumber = 1
+    foreach ($g in ($Rows | Group-Object seed)) {
+        $lines.Add("## Кластер $clusterNumber. $(Escape-MarkdownCell $g.Name)")
+        $lines.Add("")
+        $lines.Add("| # | Запрос | Частотность | Источник |")
+        $lines.Add("|---:|---|---:|---|")
+
+        $i = 1
+        foreach ($row in ($g.Group | Sort-Object searchCount -Descending)) {
+            $query = Escape-MarkdownCell $row.query
+            $count = Escape-MarkdownCell $row.searchCount
+            $source = Escape-MarkdownCell $row.source
+            $lines.Add("| $i | $query | $count | $source |")
+            $i++
+        }
+
+        $lines.Add("")
+        $clusterNumber++
+    }
+
+    $lines | Out-File -FilePath $Path -Encoding utf8
 }
 
 function Get-SeedPhrasesFromXlsx {
@@ -258,7 +307,7 @@ foreach ($g in $grouped) {
     }
 }
 
-$cleanRows | Export-Csv -Path $CleanOut -Encoding UTF8 -NoTypeInformation
+Write-ClustersMarkdown -Rows @($cleanRows) -Path $CleanOut -Title "Чистые кластеры Wordstat"
 
 $rawRows |
     Select-Object -ExpandProperty query |
@@ -270,4 +319,4 @@ $cleanRows |
     Sort-Object -Unique |
     Out-File -FilePath $CleanPhrasesOut -Encoding utf8
 
-Write-Host "Готово:`n 1) Сырой список:               $RawOut`n 2) Чистые кластеры:             $CleanOut`n 3) Сырые фразы (txt):            $RawPhrasesOut`n 4) Топ фразы на каждый seed (txt):  $CleanPhrasesOut"
+Write-Host "Готово:`n 1) Сырой список:               $RawOut`n 2) Чистые кластеры (md):        $CleanOut`n 3) Сырые фразы (txt):            $RawPhrasesOut`n 4) Топ фразы на каждый seed (txt):  $CleanPhrasesOut"

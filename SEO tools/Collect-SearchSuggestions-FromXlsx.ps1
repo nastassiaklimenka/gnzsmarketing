@@ -10,7 +10,7 @@
     [int]$TopPerSeed = 50,
 
     [string]$RawOut = ".\\search_raw.csv",
-    [string]$CleanOut = ".\\search_clean_clusters.csv",
+    [string]$CleanOut = ".\\search_clean_clusters.md",
     [string]$RawPhrasesOut = ".\\search_raw_phrases.txt",
     [string]$CleanPhrasesOut = ".\\search_clean_top_phrases.txt"
 )
@@ -48,6 +48,55 @@ function Is-CleanPhrase {
     return $true
 }
 
+function Escape-MarkdownCell {
+    param([object]$Value)
+
+    if ($null -eq $Value) { return "" }
+    return ($Value.ToString() -replace '\|', '\|' -replace "`r?`n", " ").Trim()
+}
+
+function Write-ClustersMarkdown {
+    param(
+        [object[]]$Rows,
+        [string]$Path,
+        [string]$Title
+    )
+
+    $lines = New-Object System.Collections.Generic.List[string]
+    $lines.Add("# $Title")
+    $lines.Add("")
+    $lines.Add("Сформировано: $(Get-Date -Format 'yyyy-MM-dd HH:mm')")
+    $lines.Add("")
+
+    if (-not $Rows -or $Rows.Count -eq 0) {
+        $lines.Add("_Нет очищенных запросов для вывода._")
+        $lines | Out-File -FilePath $Path -Encoding utf8
+        return
+    }
+
+    $clusterNumber = 1
+    foreach ($g in ($Rows | Group-Object seed)) {
+        $lines.Add("## Кластер $clusterNumber. $(Escape-MarkdownCell $g.Name)")
+        $lines.Add("")
+        $lines.Add("| # | Запрос | Позиция подсказки | Источник |")
+        $lines.Add("|---:|---|---:|---|")
+
+        $i = 1
+        foreach ($row in ($g.Group | Sort-Object rank)) {
+            $query = Escape-MarkdownCell $row.query
+            $rank = Escape-MarkdownCell $row.rank
+            $source = Escape-MarkdownCell $row.source
+            $lines.Add("| $i | $query | $rank | $source |")
+            $i++
+        }
+
+        $lines.Add("")
+        $clusterNumber++
+    }
+
+    $lines | Out-File -FilePath $Path -Encoding utf8
+}
+
 function Get-SeedPhrasesFromXlsx {
     param(
         [string]$Path,
@@ -76,7 +125,7 @@ function Get-SeedPhrasesFromXlsx {
         $colIndex = 0
         if ($Header) {
             $headerRow = 1
-            for ($c = 1; c -le $cols; c++) {
+            for ($c = 1; $c -le $cols; $c++) {
                 $cellVal = ($ws.Cells.Item($headerRow, $c).Text).ToString().Trim()
                 if ($cellVal -eq $Header) { $colIndex = $c; break }
             }
@@ -202,7 +251,7 @@ foreach ($g in $grouped) {
     }
 }
 
-$cleanRows | Export-Csv -Path $CleanOut -Encoding UTF8 -NoTypeInformation
+Write-ClustersMarkdown -Rows @($cleanRows) -Path $CleanOut -Title "Чистые кластеры поисковых подсказок"
 
 $rawRows |
     Select-Object -ExpandProperty query |
@@ -214,4 +263,4 @@ $cleanRows |
     Sort-Object -Unique |
     Out-File -FilePath $CleanPhrasesOut -Encoding utf8
 
-Write-Host "Готово:`n 1) Сырой список: $RawOut`n 2) Чистые кластеры: $CleanOut`n 3) Сырые фразы: $RawPhrasesOut`n 4) Топ фразы на seed: $CleanPhrasesOut"
+Write-Host "Готово:`n 1) Сырой список: $RawOut`n 2) Чистые кластеры (md): $CleanOut`n 3) Сырые фразы: $RawPhrasesOut`n 4) Топ фразы на seed: $CleanPhrasesOut"
