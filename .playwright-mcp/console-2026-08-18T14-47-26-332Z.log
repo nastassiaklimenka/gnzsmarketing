@@ -1,6 +1,0 @@
-[   15760ms] [INFO] func: tn_openeditor @ https://app.tildacdn.com/tfront/page-editor/t-page-all.min.js?v=v26081401:0
-[   22498ms] [INFO] func: tn_close. rec:1093806336 @ https://app.tildacdn.com/tfront/page-editor/t-page-all.min.js?v=v26081401:0
-[   33110ms] [LOG] Sending Network error to stat.. @ https://app.tildacdn.com/tfront/dashboard/t-common.min.js?v=v26081802:0
-[   33119ms] [LOG] 0 @ https://app.tildacdn.com/tfront/dashboard/t-common.min.js?v=v26081802:0
-[   33119ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://sysstat.tildacdn.com/api/performance/?{%22url%22:%22https://tilda.ru/projects/?projectid=3778056&folderid=375155%22,%22debugService%22:%22dashboard%22}:0
-[   62313ms] [ERROR] Failed to load resource: net::ERR_TIMED_OUT @ https://sysstat.tildacdn.com/api/net/error/:0

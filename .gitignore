@@ -3,6 +3,8 @@ npm-debug.log*
 cookies.json
 SEO/cookies.json
 
+.playwright-mcp/console-*.log
+
 # Generated working files: drafts, experiments, temporary exports, backlog.
 /generated/intermediate/*
 !/generated/intermediate/.gitkeep
