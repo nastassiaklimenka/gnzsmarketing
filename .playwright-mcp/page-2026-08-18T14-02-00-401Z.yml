@@ -1,0 +1,16 @@
+- generic [ref=e2]:
+  - link "Tilda" [ref=e3] [cursor=pointer]:
+    - /url: https://tilda.cc
+  - heading "Page is not published" [level=1] [ref=e8]
+  - paragraph [ref=e9]:
+    - text: Hey there! The link that you try opening is an internal address for editing page on website builder
+    - link "Tilda Publishing" [ref=e10] [cursor=pointer]:
+      - /url: https://tilda.cc
+    - text: .
+  - link "Log in" [ref=e11] [cursor=pointer]:
+    - /url: /login/
+  - paragraph [ref=e13]:
+    - text: "Read more in our Help Center:"
+    - link "How to publish a page and get a link for sharing with others." [ref=e14] [cursor=pointer]:
+      - /url: http://help.tilda.ws/published
+  - paragraph [ref=e15]: If you visit this website or you get this link from someone, please tell the author that they need publish the page and use public address for sharing.

@@ -1,0 +1,21 @@
+- navigation [ref=f6e2]:
+  - generic [ref=f6e3]:
+    - generic [ref=f6e5]:
+      - link [ref=f6e7] [cursor=pointer]:
+        - /url: /projects/
+      - generic [ref=f6e11]:
+        - generic [ref=f6e12]: /
+        - link [ref=f6e13] [cursor=pointer]:
+          - /url: /projects/?projectid=3778056
+    - list [ref=f6e18]:
+      - listitem [ref=f6e19]:
+        - button [disabled]
+      - listitem [ref=f6e20]:
+        - button [disabled]
+      - listitem [ref=f6e21]:
+        - link "Предпросмотр" [ref=f6e22] [cursor=pointer]:
+          - /url: https://tilda.ru/page/?pageid=193950409&projectid=3778056&previewmode=yes
+      - listitem [ref=f6e23]:
+        - button "Опубликовать" [ref=f6e24] [cursor=pointer]
+      - listitem [ref=f6e26]:
+        - button "Еще" [ref=f6e27] [cursor=pointer]

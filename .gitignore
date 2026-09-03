@@ -2,3 +2,7 @@ node_modules/
 npm-debug.log*
 cookies.json
 SEO/cookies.json
+
+# Generated working files: drafts, experiments, temporary exports, backlog.
+/generated/intermediate/*
+!/generated/intermediate/.gitkeep

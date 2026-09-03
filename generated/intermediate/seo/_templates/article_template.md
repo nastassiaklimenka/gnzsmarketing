@@ -8,6 +8,22 @@ Description:
 
 URL slug:
 
+## SEO-разметка для публикации
+
+Метатеги:
+
+```html
+<title></title>
+<meta name="description" content="">
+<link rel="canonical" href="">
+```
+
+Разметка заголовков:
+
+- H1:
+- H2:
+- H3:
+
 Главный запрос:
 
 Кластер:

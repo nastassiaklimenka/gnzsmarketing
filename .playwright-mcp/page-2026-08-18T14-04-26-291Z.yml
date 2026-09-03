@@ -1,0 +1,401 @@
+- generic [active] [ref=f6e1]:
+  - navigation [ref=f6e2]:
+    - generic [ref=f6e3]:
+      - generic [ref=f6e29]:
+        - link [ref=f6e31] [cursor=pointer]:
+          - /url: /projects/
+        - generic [ref=f6e35]:
+          - generic [ref=f6e36]: /
+          - link "Верстка/Генезис" [ref=f6e37] [cursor=pointer]:
+            - /url: /projects/?projectid=3778056
+      - generic [ref=f6e42]:
+        - button [ref=f6e43] [cursor=pointer]
+        - button [ref=f6e44] [cursor=pointer]
+        - button [ref=f6e47] [cursor=pointer]
+      - list [ref=f6e51]:
+        - listitem [ref=f6e52]:
+          - button [disabled]
+        - listitem [ref=f6e53]:
+          - button [disabled]
+        - listitem [ref=f6e54]:
+          - link "Предпросмотр" [ref=f6e55] [cursor=pointer]:
+            - /url: https://tilda.ru/page/?pageid=193950409&projectid=3778056&previewmode=yes
+        - listitem [ref=f6e56]:
+          - button "Опубликовать" [ref=f6e57] [cursor=pointer]
+        - listitem [ref=f6e59]:
+          - button "Еще" [ref=f6e60] [cursor=pointer]
+  - generic [ref=f6e61]:
+    - link "header" [ref=f6e64] [cursor=pointer]:
+      - /url: /page/?pageid=63101103
+    - generic [ref=f6e65]:
+      - list [ref=f6e73]:
+        - listitem [ref=f6e74]:
+          - link "Главная" [ref=f6e76] [cursor=pointer]:
+            - /url: /
+          - generic [ref=f6e77]: /
+        - listitem [ref=f6e78]:
+          - link "Блог" [ref=f6e80] [cursor=pointer]:
+            - /url: /blog
+          - generic [ref=f6e81]: /
+        - listitem [ref=f6e82]:
+          - generic [ref=f6e83]: Как увеличить продажи без рекламы
+      - generic [ref=f6e89]:
+        - generic [ref=f6e94]: Подзаголовок
+        - heading "H1 Заголовок" [level=1] [ref=f6e97]
+        - img "без рекламы" [ref=f6e99]
+      - generic [ref=f6e104]:
+        - generic [ref=f6e107]: "Опубликовано: 13.08.2026"
+        - generic [ref=f6e111]: "Изменено: 18.08.2026"
+        - generic [ref=f6e115]: "Время чтения: 4 мин"
+        - generic [ref=f6e119]: "Просмотры:"
+        - generic [ref=f6e123]: "Поделиться:"
+        - link [ref=f6e126] [cursor=pointer]:
+          - /url: "#"
+        - link [ref=f6e128] [cursor=pointer]:
+          - /url: "#"
+        - link [ref=f6e130] [cursor=pointer]:
+          - /url: "#"
+        - generic [ref=f6e132]:
+          - generic:
+            - textbox: "<script> document.addEventListener(\"DOMContentLoaded\", function() { var tgButtons = document.querySelectorAll('.tgshare'); tgButtons.forEach(function(btn) { btn.addEventListener('click', function(e) { e.preventDefault(); var shareUrl = \"https://t.me/share/url?url=\" + encodeURIComponent(location.href); window.open(shareUrl, \"_blank\"); }); }); }); </script> <script> document.addEventListener(\"DOMContentLoaded\", function() { /* === WhatsApp SHARE === */ var waButtons = document.querySelectorAll('.washare'); waButtons.forEach(function(btn) { btn.addEventListener('click', function(e) { e.preventDefault(); var url = \"https://api.whatsapp.com/send?text=\" + encodeURIComponent(location.href); window.open(url, \"_blank\"); }); }); /* === VK SHARE === */ var vkButtons = document.querySelectorAll('.vkshare'); vkButtons.forEach(function(btn) { btn.addEventListener('click', function(e) { e.preventDefault(); var url = \"https://vk.com/share.php?url=\" + encodeURIComponent(location.href); window.open(url, \"_blank\"); }); }); }); </script>"
+        - generic [ref=f6e134]:
+          - generic:
+            - textbox: "<script> document.addEventListener(\"DOMContentLoaded\", function() { // Находим все элементы с классом .postdate var elements = document.querySelectorAll(\".postdate\"); elements.forEach(function(el) { var text = el.innerText.trim(); // Ищем дату вида DD.MM.YYYY var match = text.match(/(\\d{2})\\.(\\d{2})\\.(\\d{4})/); if (!match) return; // если даты нет — ничего не делаем var day = match[1]; var month = match[2]; var year = match[3]; // Форматы var displayDate = `${day}.${month}.${year}`; var pubDate = `${year}-${month}-${day}`; // для datetime // Создаём тег <time> var timeEl = document.createElement(\"time\"); timeEl.setAttribute(\"datetime\", pubDate); timeEl.textContent = displayDate; // Заменяем содержимое блока el.innerHTML = \"Опубликовано: \"; el.appendChild(timeEl); // Стили el.style.fontFamily = \"'TildaSans', Arial, sans-serif\"; el.style.fontSize = \"14px\"; }); }); </script>"
+        - generic [ref=f6e136]:
+          - generic:
+            - textbox: "<script> document.addEventListener(\"DOMContentLoaded\", function() { // Укажи дату обновления здесь (формат YYYY-MM-DD) var updateDate = \"2025-10-20\"; // Формат для отображения (DD.MM.YYYY) var displayDate = updateDate.split(\"-\").reverse().join(\".\"); // Находим все элементы с классом updatedate var elements = document.querySelectorAll(\".updatedate\"); elements.forEach(function(el) { // Создаём тег time var timeEl = document.createElement(\"time\"); timeEl.setAttribute(\"datetime\", updateDate); timeEl.textContent = displayDate; // Заменяем текст элемента el.innerHTML = \"Обновлено: \"; el.appendChild(timeEl); // Добавляем стиль el.style.fontFamily = \"'TildaSans', Arial, sans-serif\"; el.style.fontSize = \"14px\"; el.style.font-weight = \"300\"; }); }); // Надёжный запуск: ждём появления контента document.addEventListener(\"DOMContentLoaded\", function() { let attempts = 0; const timer = setInterval(() => { attempts++; if (calcReadingTime()) { clearInterval(timer); } // через 3 сек прекращаем if (attempts > 15) clearInterval(timer); }, 200); }); </script>"
+        - generic [ref=f6e138]:
+          - generic:
+            - textbox: "<script> document.addEventListener(\"DOMContentLoaded\", function() { // 1. Ищем текст статьи по всему документу (кроме меню, футера, кнопок) const pageText = Array.from(document.querySelectorAll(\"p, div, span, article\")) .filter(el => !el.closest(\"header\") && !el.closest(\"footer\") && el.innerText.trim().length > 50 // чтобы не брать мелкие элементы ) .map(el => el.innerText) .join(\" \"); // Защита, если текста мало или что-то пошло не так if (!pageText || pageText.length < 50) return; // 2. Считаем слова const words = pageText.trim().split(/\\s+/).length; // 3. Средняя скорость чтения const wpm = 980; const minutes = Math.ceil(words / wpm); // 4. Находим текстовый элемент Zero Block, содержащий слово \"Время\" const targets = Array.from(document.querySelectorAll(\".tn-atom\")) .filter(el => /время чтения/i.test(el.innerText)); if (!targets.length) return; // 5. Подставляем время в найденный элемент targets.forEach(el => { el.innerText = `Время чтения: ${minutes} мин`; // CSS стили el.style.fontFamily = \"'TildaSans', Arial, sans-serif\"; el.style.fontSize = \"14px\"; }); }); </script>"
+      - generic "Слайдер" [ref=f6e144]:
+        - generic [ref=f6e145]:
+          - list
+          - generic [ref=f6e147]:
+            - group [ref=f6e148]:
+              - generic [ref=f6e153]:
+                - generic [ref=f6e154]: Автор статьи
+                - generic [ref=f6e155]: Денис, операционный директор компании "Генезис"
+                - generic [ref=f6e156]:
+                  - text: Отвечаю за стабильность операционных процессов, качество оказания услуг, выстроенные коммуникации между отделами и рост эффективности компании. Под моим руководством выстроена система, позволяющая запускать большие проекты по автоматизации, сохраняя скорость, качество и управляемость на каждом этапе.
+                  - link [ref=f6e157] [cursor=pointer]:
+                    - /url: https://gnzs.ru/blog/denis
+                    - text: Об авторе →
+            - group "1 из 1" [ref=f6e158]:
+              - generic [ref=f6e163]:
+                - generic [ref=f6e164]: Автор статьи
+                - generic [ref=f6e165]: Денис, операционный директор компании "Генезис"
+                - generic [ref=f6e166]:
+                  - text: Отвечаю за стабильность операционных процессов, качество оказания услуг, выстроенные коммуникации между отделами и рост эффективности компании.Под моим руководством выстроена система, позволяющая запускать большие проекты по автоматизации, сохраняя скорость, качество и управляемость на каждом этапе.
+                  - link "Об авторе →" [ref=f6e167] [cursor=pointer]:
+                    - /url: https://gnzs.ru/blog/denis
+            - group [ref=f6e168]:
+              - generic [ref=f6e173]:
+                - generic [ref=f6e174]: Автор статьи
+                - generic [ref=f6e175]: Денис, операционный директор компании "Генезис"
+                - generic [ref=f6e176]:
+                  - text: Отвечаю за стабильность операционных процессов, качество оказания услуг, выстроенные коммуникации между отделами и рост эффективности компании. Под моим руководством выстроена система, позволяющая запускать большие проекты по автоматизации, сохраняя скорость, качество и управляемость на каждом этапе.
+                  - link [ref=f6e177] [cursor=pointer]:
+                    - /url: https://gnzs.ru/blog/denis
+                    - text: Об авторе →
+          - list [ref=f6e178]
+      - link "Содержание" [ref=f6e187] [cursor=pointer]:
+        - /url: "#rec3023277901"
+      - heading "H2 заголовок" [level=2] [ref=f6e194]
+      - generic [ref=f6e195]: Абзац
+      - generic [ref=f6e202]: Сноска
+      - heading "H3 заголовок" [level=3] [ref=f6e222]
+      - list [ref=f6e229]:
+        - listitem [ref=f6e230]:
+          - generic [ref=f6e233]:
+            - generic [ref=f6e234]: Пункт 1
+            - generic [ref=f6e236]: Текст
+        - listitem [ref=f6e238]:
+          - generic [ref=f6e241]:
+            - generic [ref=f6e242]: Пункт 2
+            - generic [ref=f6e244]: Текст
+      - generic [ref=f6e253]:
+        - generic [ref=f6e254] [cursor=pointer]
+        - generic [ref=f6e255]:
+          - strong [ref=f6e256]: 💡
+          - text: Вывод
+      - generic [ref=f6e257]: Ссылка на услугу/продукт
+      - generic "Слайдер" [ref=f6e275]:
+        - generic [ref=f6e276]:
+          - list
+          - generic [ref=f6e278]:
+            - group [ref=f6e279]:
+              - generic [ref=f6e283]:
+                - emphasis [ref=f6e285]: "\"Цитата сотрудника.\""
+                - generic [ref=f6e286]: ФИО
+                - generic [ref=f6e287]: Должность
+            - group "1 из 1" [ref=f6e288]:
+              - generic [ref=f6e292]:
+                - emphasis [ref=f6e294]: "\"Цитата сотрудника.\""
+                - generic [ref=f6e295]: ФИО
+                - generic [ref=f6e296]: Должность
+            - group [ref=f6e297]:
+              - generic [ref=f6e301]:
+                - emphasis [ref=f6e303]: "\"Цитата сотрудника.\""
+                - generic [ref=f6e304]: ФИО
+                - generic [ref=f6e305]: Должность
+          - list [ref=f6e306]
+      - generic [ref=f6e311]:
+        - generic [ref=f6e318]: Покажем все возможности для вашего бизнеса
+        - generic [ref=f6e321]:
+          - text: Оставьте заявку, и мы за
+          - strong [ref=f6e322]: 60 минут онлайн-встречи
+          - text: покажем, как amoCRM позволяет увеличивать результаты в бизнесе.
+        - link [ref=f6e324] [cursor=pointer]:
+          - /url: "#zeropopup"
+        - link "ЗАПИСАТЬСЯ НА ВСТРЕЧУ" [ref=f6e327] [cursor=pointer]:
+          - /url: "#zeropopup"
+        - link [ref=f6e329] [cursor=pointer]:
+          - /url: "#zeropopup"
+      - generic [ref=f6e335]:
+        - generic [ref=f6e339]:
+          - generic [ref=f6e341]:
+            - link "О нас" [ref=f6e343] [cursor=pointer]:
+              - /url: https://gnzs.ru/company
+            - generic [ref=f6e346]: Генезис - помогаем системно увеличивать продажи
+            - generic [ref=f6e348]: С 2017 года мы помогаем бизнесу находить точки роста в процессах продаж и работать эффективнее, внедряя amoCRM и лучшие ИТ-решения.
+            - generic [ref=f6e355]:
+              - link "Кейсы" [ref=f6e357] [cursor=pointer]:
+                - /url: /cases
+              - link "Отзывы" [ref=f6e361] [cursor=pointer]:
+                - /url: /otzyvy
+              - link "Услуги" [ref=f6e365] [cursor=pointer]:
+                - /url: https://gnzs.ru/uslugi
+              - link "Виджеты" [ref=f6e369] [cursor=pointer]:
+                - /url: /widgets
+          - generic [ref=f6e373]:
+            - generic [ref=f6e374]: Есть вопросы? Напишите нам
+            - generic [ref=f6e377]:
+              - link [ref=f6e378] [cursor=pointer]:
+                - /url: https://max.ru/id5256172150_bot
+              - link [ref=f6e382] [cursor=pointer]:
+                - /url: https://vk.me/-148384693
+              - link [ref=f6e388] [cursor=pointer]:
+                - /url: https://t.me/gnzs_bot
+              - link [ref=f6e394] [cursor=pointer]:
+                - /url: https://wa.me/74991124446
+        - generic [ref=f6e401]:
+          - generic:
+            - textbox: "<style> .g-sidebar-container{ left: 0 !important; } </style>"
+      - generic [ref=f6e402]: Читайте также
+      - generic [ref=f6e413]:
+        - 'link "Карта пути клиента (CJM): как выявить точки потери заявок и увеличить продажи" [ref=f6e415] [cursor=pointer]':
+          - /url: "?pageid=150104826"
+        - 'link "Как сделать рассылку в ВК: инструкция + сервисы и автоматизация" [ref=f6e422] [cursor=pointer]':
+          - /url: "?pageid=128847736"
+        - 'link "Аналитика в amoCRM: настройка, анализ продаж, отчеты" [ref=f6e429] [cursor=pointer]':
+          - /url: "?pageid=97840046"
+        - 'link "KPI-отчёты для отдела продаж: автоматизация аналитики и Google Таблицы" [ref=f6e436] [cursor=pointer]':
+          - /url: "?pageid=70377223"
+      - generic [ref=f6e446]:
+        - link [ref=f6e450] [cursor=pointer]:
+          - /url: /blog
+        - link [ref=f6e452] [cursor=pointer]:
+          - /url: /blog
+        - link [ref=f6e454] [cursor=pointer]:
+          - /url: /blog
+        - link "Перейти в блог" [ref=f6e457] [cursor=pointer]:
+          - /url: /blog
+      - generic [ref=f6e463]:
+        - generic [ref=f6e471]:
+          - textbox "name" [ref=f6e474]:
+            - /placeholder: Ваше Имя
+          - generic [ref=f6e477]:
+            - generic [ref=f6e478] [cursor=pointer]: "+7"
+            - textbox "(000) 000-00-00" [ref=f6e482]
+          - generic [ref=f6e485] [cursor=pointer]:
+            - checkbox "Отправляя заявку, я соглашаюсь с Политикой конфиденциальности и даю согласие на обработку персональных данных." [checked] [ref=f6e486]
+            - generic [ref=f6e488]:
+              - text: Отправляя заявку, я соглашаюсь с
+              - link "Политикой конфиденциальности" [ref=f6e489]:
+                - /url: /privacy-policy
+              - text: и даю согласие на
+              - link "обработку персональных данных" [ref=f6e490]:
+                - /url: /personal-data
+              - text: .
+          - button "Отправить" [ref=f6e492] [cursor=pointer]
+        - generic [ref=f6e493]: или напишите нам в мессенджеры
+        - link [ref=f6e496] [cursor=pointer]:
+          - /url: https://wa.me/74991124446
+        - link [ref=f6e498] [cursor=pointer]:
+          - /url: https://wa.me/74991124446
+        - link [ref=f6e502] [cursor=pointer]:
+          - /url: https://wa.me/74991124446
+        - link [ref=f6e504] [cursor=pointer]:
+          - /url: https://t.me/gnzs_bot
+        - link [ref=f6e506] [cursor=pointer]:
+          - /url: https://t.me/gnzs_bot
+        - link [ref=f6e510] [cursor=pointer]:
+          - /url: https://t.me/gnzs_bot
+        - link [ref=f6e512] [cursor=pointer]:
+          - /url: https://vk.me/-148384693
+        - link [ref=f6e514] [cursor=pointer]:
+          - /url: https://vk.me/-148384693
+        - link [ref=f6e518] [cursor=pointer]:
+          - /url: https://vk.me/-148384693
+        - link [ref=f6e520] [cursor=pointer]:
+          - /url: https://t.me/gnzs_bot
+        - link [ref=f6e524] [cursor=pointer]:
+          - /url: https://max.ru/id5256172150_bot
+        - link "Телефон" [ref=f6e529] [cursor=pointer]:
+          - /url: "tel:"
+        - link "+7 (499) 112-44-46" [ref=f6e532] [cursor=pointer]:
+          - /url: "tel:"
+        - link [ref=f6e534] [cursor=pointer]:
+          - /url: "tel:"
+        - link [ref=f6e539] [cursor=pointer]:
+          - /url: tel:+74991124446
+        - link "Почта" [ref=f6e544] [cursor=pointer]:
+          - /url: mailto:hello@gnzs.ru
+        - link "hello@gnzs.ru" [ref=f6e547] [cursor=pointer]:
+          - /url: mailto:hello@gnzs.ru
+        - link [ref=f6e549] [cursor=pointer]:
+          - /url: mailto:hello@gnzs.ru
+        - link [ref=f6e554] [cursor=pointer]:
+          - /url: mailto:hello@gnzs.ru
+        - generic [ref=f6e555]: CRM-команда для вашего роста
+        - generic [ref=f6e559]: Оставьте заявку и мы покажем реальные кейсы из вашей ниши и поможем подобрать решения, которые действительно работают!
+        - generic [ref=f6e561]: Обсудим стратегию вашего роста
+      - generic [ref=f6e568]:
+        - generic [ref=f6e573]: ГЕНЕЗИС
+        - generic [ref=f6e577]: C 2017 года увеличиваем продажи в бизнесе, внедряя эффективные инструменты
+        - link [ref=f6e580] [cursor=pointer]:
+          - /url: https://gnzs.ru/company
+        - link [ref=f6e582] [cursor=pointer]:
+          - /url: https://gnzs.ru/company
+        - link "Подробнее о нас" [ref=f6e585] [cursor=pointer]:
+          - /url: https://gnzs.ru/company
+        - link [ref=f6e587] [cursor=pointer]:
+          - /url: https://gnzs.ru/company
+        - generic [ref=f6e590]: КОМАНДА
+        - generic [ref=f6e592]: КОМАНДА ПРОФЕССИОНАЛОВ
+        - generic [ref=f6e594]: "+43"
+        - generic [ref=f6e600]: 64+
+        - generic [ref=f6e602]: ВИДЖЕТА РАЗРАБОТАНО КОМАНДОЙ
+        - generic [ref=f6e608]: СПИКЕРЫ НА КОНФЕРЕНЦИЯХ
+        - generic [ref=f6e610]: СПИКЕРЫ НА КОНФЕРЕНЦИЯХ
+        - generic [ref=f6e616]: 19 126
+        - generic [ref=f6e618]: лицензий наших виджетов активировано в аккаунтах клиентов
+        - generic [ref=f6e622]: 1 МЕСТО
+        - generic [ref=f6e624]: В НОМИНАЦИИ "САМОЕ ЭФФЕКТИВНОЕ ВНЕДРЕНИЕ"
+        - generic [ref=f6e628]: ТОП 3
+        - generic [ref=f6e630]: ИНТЕГРАТОР ПО ВЕРСИИ CRM РЕЙТИНГ
+        - generic [ref=f6e634]: Оттачиваем подходы к росту продаж в бизнесе через CRM и ИТ-инструменты
+      - generic [ref=f6e641]:
+        - generic [ref=f6e642]: Код будет выполнен на опубликованной странице (нажмите «Опубликовать» в правом верхнем углу)
+        - code [ref=f6e649]:
+          - text: <!-- Микроразметка -->
+          - generic [ref=f6e650]: <script type="application/ld+json">
+          - generic [ref=f6e651]: "{ \"@context\": \"http://schema.org/\", \"@type\": \"BreadcrumbList\", \"itemListElement\": [ { \"@type\": \"ListItem\", \"position\": 1, \"name\": \"Главная\", \"item\": \"https://gnzs.ru\" }, { \"@type\": \"ListItem\", \"position\": 2, \"name\": \"Блог\", \"item\": \"https://gnzs.ru/blog\" }, { \"@type\": \"ListItem\", \"position\": 3, \"name\": \"Как увеличить продажи без рекламы\", \"item\": \"https://gnzs.ru/blog/kak-uvelichit-prodazhi-bez-reklamy\" } ] }"
+          - generic [ref=f6e652]: </script>
+          - generic [ref=f6e653]: <script type="application/ld+json">
+          - generic [ref=f6e654]: "{ \"@context\": \"http://schema.org/\", \"@type\": \"Article\", \"mainEntityOfPage\": { \"@type\": \"WebPage\", \"@id\": \"https://gnzs.ru/blog/kak-uvelichit-prodazhi-bez-reklamy\" }, \"author\": { \"@type\": \"Organization\", \"name\": \"Генезис\" }, \"publisher\": { \"@type\": \"Organization\", \"name\": \"\", \"logo\": { \"@type\": \"ImageObject\", \"url\": \"https://optim.tildacdn.com/tild3562-6533-4565-b666-333539303033/-/resize/112x/-/format/webp/logo512x128-new2.png.webp\" } }, \"headline\": \"Как увеличить продажи без рекламы\", \"image\": \"https://optim.tildacdn.com/tild3630-3032-4265-b735-613131613235/-/format/webp/sources2x.png.webp\", \"datePublished\": \"2025-02-05T10:32:45+03:00\" }"
+          - generic [ref=f6e655]: </script>
+    - generic [ref=f6e662]:
+      - generic [ref=f6e663]: Все блоки
+      - generic [ref=f6e673]:
+        - generic [ref=f6e674] [cursor=pointer]: Обложка
+        - generic [ref=f6e675] [cursor=pointer]: "Заголовок: средний"
+        - generic [ref=f6e676] [cursor=pointer]: Лид
+        - generic [ref=f6e677] [cursor=pointer]: Текст
+        - generic [ref=f6e678] [cursor=pointer]: Фраза
+        - generic [ref=f6e679] [cursor=pointer]: Изображение
+        - generic [ref=f6e680] [cursor=pointer]: Галерея
+        - generic [ref=f6e681] [cursor=pointer]: Линия
+      - generic [ref=f6e683]: Zero
+      - generic [ref=f6e691]: Vibe
+    - link "footer" [ref=f6e704] [cursor=pointer]:
+      - /url: /page/?pageid=18359623
+  - generic:
+    - generic:
+      - button [ref=f6e705] [cursor=pointer]
+      - button [ref=f6e706] [cursor=pointer]
+    - generic:
+      - button [ref=f6e707] [cursor=pointer]
+      - button [ref=f6e708] [cursor=pointer]
+    - generic:
+      - button [ref=f6e709] [cursor=pointer]
+      - button [ref=f6e710] [cursor=pointer]
+    - generic:
+      - button [ref=f6e711] [cursor=pointer]
+      - button [ref=f6e712] [cursor=pointer]
+    - generic:
+      - button [ref=f6e713] [cursor=pointer]
+      - button [ref=f6e714] [cursor=pointer]
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - button "TL04" [ref=f6e715] [cursor=pointer]
+              - generic:
+                - button "Настройки" [ref=f6e718] [cursor=pointer]
+                - button "Контент" [ref=f6e721] [cursor=pointer]
+            - generic: "Заголовок: 28"
+          - generic:
+            - button [ref=f6e725] [cursor=pointer]
+            - generic:
+              - button [ref=f6e727] [cursor=pointer]
+              - button [ref=f6e729] [cursor=pointer]
+              - button [ref=f6e731] [cursor=pointer]
+              - button [ref=f6e733] [cursor=pointer]
+            - generic:
+              - button [ref=f6e735] [cursor=pointer]
+              - button [ref=f6e737] [cursor=pointer]
+      - button [ref=f6e741] [cursor=pointer]
+      - button [ref=f6e742] [cursor=pointer]
+    - generic:
+      - button [ref=f6e743] [cursor=pointer]
+      - button [ref=f6e744] [cursor=pointer]
+    - generic:
+      - button [ref=f6e745] [cursor=pointer]
+      - button [ref=f6e746] [cursor=pointer]
+    - generic:
+      - button [ref=f6e747] [cursor=pointer]
+      - button [ref=f6e748] [cursor=pointer]
+    - generic:
+      - button [ref=f6e749] [cursor=pointer]
+      - button [ref=f6e750] [cursor=pointer]
+      - button [ref=f6e751] [cursor=pointer]
+    - generic:
+      - button [ref=f6e752] [cursor=pointer]
+      - button [ref=f6e753] [cursor=pointer]
+    - generic:
+      - button [ref=f6e754] [cursor=pointer]
+      - button [ref=f6e755] [cursor=pointer]
+      - button [ref=f6e756] [cursor=pointer]
+    - generic:
+      - button [ref=f6e757] [cursor=pointer]
+      - button [ref=f6e758] [cursor=pointer]
+      - button [ref=f6e759] [cursor=pointer]
+    - generic:
+      - button [ref=f6e760] [cursor=pointer]
+      - button [ref=f6e761] [cursor=pointer]
+    - generic:
+      - button [ref=f6e762] [cursor=pointer]
+      - button [ref=f6e763] [cursor=pointer]
+    - generic:
+      - button [ref=f6e764] [cursor=pointer]
+      - button [ref=f6e765] [cursor=pointer]
+    - generic:
+      - button [ref=f6e766] [cursor=pointer]
+      - button [ref=f6e767] [cursor=pointer]
+      - button [ref=f6e768] [cursor=pointer]
+    - generic:
+      - button [ref=f6e769] [cursor=pointer]
+      - button [ref=f6e770] [cursor=pointer]
+    - generic:
+      - button [ref=f6e771] [cursor=pointer]
+      - button [ref=f6e772] [cursor=pointer]
+    - generic:
+      - button [ref=f6e773] [cursor=pointer]
+      - button [ref=f6e774] [cursor=pointer]
+    - generic:
+      - button [ref=f6e775] [cursor=pointer]
+      - button [ref=f6e776] [cursor=pointer]
+      - button [ref=f6e777] [cursor=pointer]
+  - generic [ref=f6e778] [cursor=pointer]
