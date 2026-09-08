@@ -45,10 +45,10 @@ description: Производство SEO-статей для блога Ген�
 
 Шаблоны:
 
-- [cluster_review_template.md](D:/Генезис/Marketing/gnzsmarketing/generated/intermediate/seo/_templates/cluster_review_template.md)
-- [research_template.md](D:/Генезис/Marketing/gnzsmarketing/generated/intermediate/seo/_templates/research_template.md)
-- [article_template.md](D:/Генезис/Marketing/gnzsmarketing/generated/intermediate/seo/_templates/article_template.md)
-- [tilda_map_template.md](D:/Генезис/Marketing/gnzsmarketing/generated/intermediate/seo/_templates/tilda_map_template.md)
+- [cluster_review_template.md](D:/Генезис/Marketing/gnzsmarketing/SEO%20tools/templates/cluster_review_template.md)
+- [research_template.md](D:/Генезис/Marketing/gnzsmarketing/SEO%20tools/templates/research_template.md)
+- [article_template.md](D:/Генезис/Marketing/gnzsmarketing/SEO%20tools/templates/article_template.md)
+- [tilda_map_template.md](D:/Генезис/Marketing/gnzsmarketing/SEO%20tools/templates/tilda_map_template.md)
 
 ## Входные данные
 
