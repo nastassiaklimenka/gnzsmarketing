@@ -179,11 +179,14 @@
 
 - [generated/intermediate/seo](/D:/Генезис/Marketing/gnzsmarketing/generated/intermediate/seo)
 
+Постоянная директория шаблонов:
+
+- [SEO tools/templates](/D:/Генезис/Marketing/gnzsmarketing/SEO%20tools/templates)
+
 Структура батча:
 
 ```text
 generated/intermediate/seo/
-  _templates/
   batch-01/
     cluster_candidates.csv
     cluster_review.md
